@@ -4,9 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-sgqlc = "*"
+sgqlc = "==1"
 
 [dev-packages]
+pytest = "==4.0.0"
 
 [requires]
 python_version = "3.7"
