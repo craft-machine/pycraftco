@@ -12,7 +12,7 @@ API_ENDPOINT = "https://api.craft.co/v1/query"
 def get_company(query_callback, api_key,
                 id=None, duns=None, name_contains=None, domain=None):
     if not any(a for a in [id, duns, name_contains, domain]):
-        raise ValueError('One of id, duns, name_contains or domain should be passed.')
+        raise ValueError('One of duns, name_contains or domain should be passed.')
 
     op = Operation(schema.Query)
     company = op.company(id=id, duns=duns, name_contains=name_contains, domain=domain)
@@ -22,9 +22,17 @@ def get_company(query_callback, api_key,
     endpoint = HTTPEndpoint(API_ENDPOINT, {"x-craft-api-key": api_key})
     data = endpoint(op)
 
+    if 'errors' in data:
+        errors = data['errors']
+        raise ApiError(f'API return errors: {errors}')
+
     found_company = (op + data).company
     if found_company:
         return found_company
+
+
+class ApiError(Exception):
+    pass
 
 
 if __name__ == '__main__':
