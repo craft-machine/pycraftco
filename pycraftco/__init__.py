@@ -1,6 +1,6 @@
 from sgqlc.operation import Operation
 from sgqlc.endpoint.http import HTTPEndpoint
-from craft_api_schema import craft_api_schema as schema
+from pycraftco.craft_api_schema import craft_api_schema as schema
 
 
 API_KEY = "***API KEY***"
