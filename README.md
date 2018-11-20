@@ -5,7 +5,8 @@
 ### Installation
 
 You can install package via `pip`:
-
+    $ pip install pycraftco
+    or
     $ pip install git+https://github.com/craft-machine/pycraftco.git
 
 
