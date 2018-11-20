@@ -1,14 +1,14 @@
 ## PYCRAFTCO
 
-**pycraftco** is a Python library that serves as a convenient wrapper for [Craft API](https://api.craft.co/docs/v1)
+[![CircleCI](https://circleci.com/gh/craft-machine/pycraftco.svg?style=svg)](https://circleci.com/gh/craft-machine/pycraftco)
+
+**pycraftco** is a Python library that serves as a convenient wrapper for [Craft API](https://api.craft.co/docs/v1).
 
 ### Installation
 
 You can install package via `pip`:
-    $ pip install pycraftco
-    or
-    $ pip install git+https://github.com/craft-machine/pycraftco.git
 
+    $ pip install pycraftco
 
 ### Usage
 

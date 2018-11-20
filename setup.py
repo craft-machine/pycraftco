@@ -8,7 +8,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="pycraftco",
-    version="0.0.1",
+    version="0.1",
     description="pycraftco is a Python library that serves as a convenient wrapper for Craft API (https://api.craft.co/docs/v1)",
     long_description=long_description,
     long_description_content_type="text/markdown",
