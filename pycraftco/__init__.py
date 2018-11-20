@@ -6,11 +6,9 @@ from sgqlc.endpoint.http import HTTPEndpoint
 from pycraftco.craft_api_schema import craft_api_schema as schema
 
 
-API_ENDPOINT = "https://api.craft.co/v1/query"
-
-
 def get_company(query_callback, api_key,
-                id=None, duns=None, name_contains=None, domain=None):
+                id=None, duns=None, name_contains=None, domain=None,
+                api_endpoint="https://api.craft.co/v1/query"):
     if not any(a for a in [id, duns, name_contains, domain]):
         raise ValueError('One of id, duns, name_contains or domain should be passed.')
 
@@ -19,7 +17,7 @@ def get_company(query_callback, api_key,
 
     query_callback(company)
 
-    endpoint = HTTPEndpoint(API_ENDPOINT, {"x-craft-api-key": api_key})
+    endpoint = HTTPEndpoint(api_endpoint, {"x-craft-api-key": api_key})
     data = endpoint(op)
 
     found_company = (op + data).company
