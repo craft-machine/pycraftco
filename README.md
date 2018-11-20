@@ -29,7 +29,7 @@ def company_query(company):
     company.locations.hq()
 
 # You can use duns, name_constains or domain to search for companies
-c = get_company(company_query, name_contains='Facebook', api_key=os.environ['API_KEY'])
+c = get_company(company_query, name_contains='Facebook', api_key=api_key)
 ```
 
 The code uses the test key that allows access to Facebook data only. Please, visit
@@ -37,7 +37,7 @@ https://craft.co/business#business-form to request more permissive key.
 
 ### Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/craft-machine/pycraftco .
+Bug reports and pull requests are welcome on GitHub at https://github.com/craft-machine/pycraftco.
 
 ### License
 
