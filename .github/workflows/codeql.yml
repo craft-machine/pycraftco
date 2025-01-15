@@ -1,4 +1,11 @@
-# DO NOT MODIFY THIS FILE MANUALLY : The content of this file is managed by Terraform Configuration in https://github.com/craft-machine/infrastructure repository.
+# DO NOT PUSH changes to this file to the 'master' default branch!
+# Any changes will be overwritten automatically because it is managed by
+# Terraform Configuration in the 'https://github.com/craft-machine/infrastructure' repository.
+#
+# Temporary modifications are allowed only on a feature branch to trigger GitHub CodeQL analysis.
+# For detailed instructions, refer to the following guide:
+# - Code Projects Vulnerability Scanning: Guidance on temporary changes and scanning setup
+#   [Notion Link](https://www.notion.so/craftmachine/Code-Projects-Vulnerability-Scanning-a4c241877b0b4876b2242aa06bd50905).
 
 name: "CodeQL"
 
